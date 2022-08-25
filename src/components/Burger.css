@@ -1,0 +1,96 @@
+.ingredients{
+  height: auto;
+  width: 100%;
+  overflow: auto;
+}
+.ingredients p{
+  text-align: center;
+}
+.topSide{
+  background-image: url(/src/assets/top.jpeg);
+  background-size: 300px;
+  height: 110px;
+  width: 100%;
+  display: table;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bottomSide{
+  background-image: url(/src/assets/bottom.jpeg);
+  background-size: 300px;
+  height: 60px;
+  width: 100%;
+  display: table;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.lettuceSide{
+  background-image: url(/src/assets/lettuse.jpeg);
+  background-size: 300px;
+  height: 27px;
+  width: 100%;
+  display: table;
+  background-repeat: no-repeat;
+  background-position: center;
+ background-position: center;
+}
+.baconSide{
+  background-image: url(/src/assets/bacon.jpeg);
+  background-size: 300px;
+  height: 20px;
+  width: 100%;
+  display: table;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cheeseSide{
+  background-image: url(/src/assets/cheese.jpeg);
+  background-size: 300px;
+  height: 15px;
+  width: 100%;
+  display: table;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.meatSide{
+  background-image: url(/src/assets/meat.jpeg);
+  background-size: 300px;
+  height: 49px;
+  width: 100%;
+  display: table;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ingredientsDiv{
+  background-color: #dbb78d;
+  margin: 30px auto 0;
+  display: table;
+  max-width: 200px;
+  width: 100%;
+  border-radius: 3px;
+  padding: 20px;
+  text-align: center;
+}
+.ingredientsDiv p{
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.btnDiv{
+  margin: 0 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.btnIngredients{
+  border: 0;
+  background-color: #9b7141;
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+  display: table;
+  width: 95px;
+}

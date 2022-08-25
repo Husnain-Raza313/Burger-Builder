@@ -1,0 +1,17 @@
+.logo{
+  height: 30px;
+  width: auto;
+}
+.logo-bckg{
+  background-color: white;
+  padding: 5px;
+}
+.navbar{
+  background-color: rgb(118, 87, 48);
+  height: 60px;
+  color:white;
+  font-family: 'Times New Roman', Courier, monospace;
+}
+.navbar-brand{
+  cursor: pointer;
+}
