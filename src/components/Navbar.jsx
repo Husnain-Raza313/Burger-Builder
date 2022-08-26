@@ -2,25 +2,30 @@ import React from 'react'
 import './Navbar.css';
 import { auth} from '../firebase-config';
 import { useState } from 'react';
-import { createUserWithEmailAndPassword, onAuthStateChanged,signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import {  onAuthStateChanged, signOut } from 'firebase/auth';
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
-  const [user, setUser] = useState({hell: "hello"});
+  const [user, setUser] = useState({});
 
-  onAuthStateChanged(auth,(currentUser)=>{
-    setUser(currentUser);
-  });
+  let navigate= useNavigate();
+
+  const logout = async () => {
+    await  signOut(auth);
+    localStorage.clear();
+    navigate("/");
+  };
+
   return (
     <nav className="navbar justify-content-between mb-5">
       <div className="navbar-brand logo-bckg"><img src='logo.png' className='logo'/></div>
       <div >
-      <a className="navbar-brand">BurgerBuilder</a>
-      { user === null ?
-        <a className="navbar-brand">Login</a>
+      <p className="navbar-brand" onClick={()=>{navigate("/");}}>BurgerBuilder</p>
+      { localStorage.getItem("email") === null ?
+      <p className="navbar-brand text-decoration-none" onClick={()=>{navigate("/signform")}}>Login</p>
       : <div className="navbar-brand">
-      <a className="navbar-brand">Orders</a>
-      <a className="navbar-brand">Logout</a>
+      <p className="navbar-brand" onClick={()=>{navigate("/orderlist");}}>Orders</p>
+      <p className="navbar-brand" onClick={logout}>Logout</p>
       </div>
-
       }
 
       </div>

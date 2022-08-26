@@ -1,0 +1,11 @@
+.orderContainer{
+  border: 2px groove grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.orderContainer p{
+  border: 2px solid grey;
+  padding: 10px;
+}
