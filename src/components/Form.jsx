@@ -18,7 +18,7 @@ const Form = () => {
     console.log(user);
     navigate("/");
     } catch(error){
-      console.log(error.message);
+      alert(error.message);
     }
   };
   const login = async () => {
@@ -29,7 +29,7 @@ const Form = () => {
       console.log(user._tokenResponse.email);
       navigate("/");
       } catch(error){
-        console.log(error.message);
+        alert(error.message);
       }
 
   };
