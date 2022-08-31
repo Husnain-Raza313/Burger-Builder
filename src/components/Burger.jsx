@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import "./Burger.css";
-import { auth } from "../firebase-config";
-import { onAuthStateChanged } from "firebase/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Modal from "./Modal";
+import {BurgerContainer} from './BurgerContainer';
 export default class Burger extends Component {
    burger =JSON.parse(localStorage.getItem("burger"));
   state = {
@@ -34,7 +33,7 @@ export default class Burger extends Component {
   };
 
   addDeleteIngredient = (action, ing) => {
-    let { lettuce, bacon, cheese, meat, total } = this.state;
+    let { lettuce, bacon, cheese, meat } = this.state;
 
     let noOfIngs;
     let price;
@@ -62,42 +61,6 @@ export default class Burger extends Component {
     }
     this.setState({ [ing]: noOfIngs });
   };
-  makeBurger = () => {
-    let { lettuce, bacon, cheese, meat } = this.state;
-
-    let burgerIngs = [];
-
-    for (let i = 0; i < lettuce; i++) {
-      burgerIngs.push(
-        <div key={burgerIngs.length}>
-          <img src="lettuse.jpeg" />
-        </div>
-      );
-    }
-    for (let i = 0; i < bacon; i++) {
-      burgerIngs.push(
-        <div key={burgerIngs.length}>
-          <img src="bacon.jpeg" />
-        </div>
-      );
-    }
-    for (let i = 0; i < cheese; i++) {
-      burgerIngs.push(
-        <div key={burgerIngs.length}>
-          <img src="cheese.jpeg" />
-        </div>
-      );
-    }
-    for (let i = 0; i < meat; i++) {
-      burgerIngs.push(
-        <div key={burgerIngs.length}>
-          <img src="meat.jpeg" />
-        </div>
-      );
-    }
-
-    return burgerIngs;
-  };
 
   orderFunc = () => {
     let { lettuce, bacon, cheese, meat, total } = this.state;
@@ -122,16 +85,16 @@ export default class Burger extends Component {
         <div className="burgerContainer">
           <div className="ingredients">
             <div className="topSide">
-              <img src="top.jpeg" className="mb-2" />
+              <img src="top2.png" className="mb-2" />
             </div>
-            {this.makeBurger()}
+            <BurgerContainer ingredients ={this.state} />
             <div className="bottomSide">
-              <img src="bottom.jpeg" />
+              <img src="bottom2.png" />
             </div>
           </div>
           <div className="ingredientsDiv">
             <div className="ingredientsWrapper">
-              <h4>Current price: {this.state.total}$</h4>
+              <h4>Current price: {this.state.total.toFixed(3)}$</h4>
               <div className="btnDiv">
                 <b>Lettuce</b>
                 <button
@@ -204,7 +167,7 @@ export default class Burger extends Component {
                 <button
                   className="orderBtn btn btn-warning"
                   onClick={() => this.orderFunc()}>
-                  <Link to="/signform"> <p>SIGN UP TO ORDER NOW</p></Link>
+                  <Link to="/signform" className="sign-up"><p className="sign-up">SIGN UP TO ORDER NOW</p></Link>
                 </button>
                 </div>
                :

@@ -28,7 +28,7 @@ const Modal = (props) => {
             <p>Bacon: {burger.bacon}</p>
             <p>Meat: {burger.meat}</p>
             <p>Cheese: {burger.cheese}</p>
-            <p>Total: {burger.total}$</p>
+            <p>Total: {burger.total.toFixed(3)}$</p>
           </div>
           <hr/>
           <div class="modal-header">

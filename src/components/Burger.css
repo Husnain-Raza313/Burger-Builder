@@ -9,14 +9,14 @@
   width: 100%;
 }
 .topSide img{
-  height: 90px;
-  width: 550px;
+  height: 60px;
+  width: 380px;
 
 }
 
 .bottomSide img{
-  height: 90px;
-  width: 550px;
+  height: 60px;
+  width: 380px;
 }
 .ingredientsDiv{
   padding:10px;
@@ -51,4 +51,8 @@
   height: 80px;
   width:240px;
   margin-top: 10px;
+}
+.sign-up{
+  text-decoration: none !important;
+  color: white;
 }

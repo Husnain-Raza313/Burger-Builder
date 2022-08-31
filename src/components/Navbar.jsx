@@ -1,11 +1,9 @@
 import React from 'react'
 import './Navbar.css';
 import { auth} from '../firebase-config';
-import { useState } from 'react';
-import {  onAuthStateChanged, signOut } from 'firebase/auth';
+import { signOut } from 'firebase/auth';
 import { useNavigate } from "react-router-dom";
 const Navbar = () => {
-  const [user, setUser] = useState({});
 
   let navigate= useNavigate();
 
