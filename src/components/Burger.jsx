@@ -23,11 +23,11 @@ export default class Burger extends Component {
   componentDidMount = () => {
     let burger =JSON.parse(localStorage.getItem("burger"));
   this.setState( {
-    lettuce: burger ===null ? 0 : this.burger.lettuce,
-    bacon: burger ===null ? 0 : this.burger.bacon,
-    cheese: burger ===null ? 0 : this.burger.cheese,
-    meat: burger===null ? 0 : this.burger.meat,
-    total: burger === null ? 2.33 : this.burger.total,
+    lettuce: burger ===null ? 0 : burger.lettuce,
+    bacon: burger ===null ? 0 : burger.bacon,
+    cheese: burger ===null ? 0 : burger.cheese,
+    meat: burger===null ? 0 : burger.meat,
+    total: burger === null ? 2.33 : burger.total,
     visible: false,
   });
   };
