@@ -1,11 +1,11 @@
 import './App.css';
 import React from 'react';
-import Burger from './components/Burger';
-import Form from './components/Form';
+import Burger from './pages/Burger';
+import Form from './pages/Form';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Error from './components/Error';
-import Order from './components/Order';
+import Error from './pages/Error';
+import Order from './pages/Order';
 
 
 function App() {
